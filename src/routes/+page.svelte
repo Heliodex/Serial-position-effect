@@ -7,22 +7,33 @@
 	import Results from "$lib/Results.svelte"
 
 	import Wordlist from "$lib/Words.json"
+	import Debrief from "$lib/Debrief.svelte"
 
 	const length = 20
 	let randomWords: string[] = []
 	let recalledWords: string[] = $state(Array(length).fill(""))
 
-	for (let i = 0; i < length; i++)
-		randomWords.push(Wordlist[Math.floor(Math.random() * Wordlist.length)])
+	for (let i = 0; i < length; i++){
+		// prevent duplicates
+		const randomWord = Wordlist[Math.floor(Math.random() * Wordlist.length)]
+		if (!randomWords.includes(randomWord)) randomWords.push(randomWord)
+		else i--
+	}
 	
-	let page = $state(6)
+	let page = $state(-0)
+
+	$effect(() => {
+		if (localStorage.getItem("done") == "true") page = 7
+		else page = 1
+	})
+
 	const go = () => page++
 </script>
 
 {#if page == 1}
-	<Info {go} />
-{:else if page == 2}
 	<Consent {go} />
+{:else if page == 2}
+	<Info {go} {length}/>
 {:else if page == 3}
 	<Countdown {go} />
 {:else if page == 4}
@@ -33,5 +44,9 @@
 		go()
 	}}/>
 {:else if page == 6}
-	<Results words={randomWords} recalled={recalledWords} />
+	<Results {go} words={randomWords} recalled={recalledWords} />
+{:else if page == 7}
+	<Debrief />	
+{:else}
+	<h1>Loading...</h1>
 {/if}

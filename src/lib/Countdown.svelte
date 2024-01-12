@@ -4,7 +4,7 @@
 	const { go } = $props<{
 		go: () => void
 	}>()
-	const time = 1
+	const time = 5
 	let timeLeft = $state(time)
 
 	$effect(() => {

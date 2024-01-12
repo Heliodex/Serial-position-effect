@@ -6,7 +6,7 @@
 		words: string[]
 	}>()
 
-	const time = 1
+	const time = 3
 	const length = words.length
 	let word = $state(0)
 

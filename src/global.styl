@@ -1,16 +1,29 @@
+@font-face
+	font-family "Lexend Deca"
+	src url("/Lexend.woff2") format("woff2")
+	font-display swap
+
 body
-	margin 0
 	background #ddd
+	min-height 100vh
+	font-size 20px
+	line-height 1.5
 
 *
-	font-family sans-serif
+	font-family "Lexend Deca", sans-serif
 	box-sizing border-box
 
 button
+	cursor pointer
 	@apply bg-blue-500 transition text-white
 	@apply text-base p-2 px-4 rounded-2 border-none
 	&:hover
 		@apply bg-blue-700
+
+img
+	border 2px solid black
+	@apply rounded-4
+	box-shadow 5px 5px 0 #0005
 
 h1
 h2
@@ -18,4 +31,9 @@ h3
 h4
 h5
 h6
+input[type="checkbox"]
+body
 	margin 0
+
+input[type="checkbox"]
+	@apply size-6 min-size-6

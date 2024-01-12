@@ -3,6 +3,6 @@
 	import "/src/global.styl"
 </script>
 
-<main class="size-screen py-50 overflow-x-hidden flex justify-center">
+<main class="py-[min(12rem,15vh)] flex justify-center">
 	<slot />
 </main>
