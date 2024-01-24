@@ -12,7 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "^3.0.0",
+		"@sveltejs/adapter-node": "^3.0.3",
 		"@sveltejs/kit": "^2.3.0",
 		"@unocss/extractor-svelte": "^0.58.3",
 		"@unocss/transformer-directives": "^0.58.3",
