@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^3.0.3",
-		"@sveltejs/kit": "^2.3.0",
+		"@sveltejs/kit": "^2.4.3",
 		"@unocss/extractor-svelte": "^0.58.3",
 		"@unocss/transformer-directives": "^0.58.3",
 		"@unocss/transformer-variant-group": "^0.58.3",
