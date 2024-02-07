@@ -6,25 +6,25 @@
 	import Recall from "$lib/Recall.svelte"
 	import Results from "$lib/Results.svelte"
 
-	import Wordlist from "$lib/Words.json"
+	import Wordlist from "$lib/words.json"
 	import Debrief from "$lib/Debrief.svelte"
 
 	const length = 20
 	let randomWords: string[] = []
 	let recalledWords: string[] = $state(Array(length).fill(""))
 
-	for (let i = 0; i < length; i++){
+	for (let i = 0; i < length; i++) {
 		// prevent duplicates
 		const randomWord = Wordlist[Math.floor(Math.random() * Wordlist.length)]
 		if (!randomWords.includes(randomWord)) randomWords.push(randomWord)
 		else i--
 	}
 	
-	let page = $state(-0)
+	let page = $state(0)
 
 	$effect(() => {
 		if (localStorage.getItem("done") == "true") page = 7
-		else page = 1
+		else page = 6
 	})
 
 	const go = () => page++
@@ -39,14 +39,14 @@
 {:else if page == 4}
 	<Words {go} words={randomWords} />
 {:else if page == 5}
-	<Recall length={randomWords.length} recall={(list: string[]) => {
+	<Recall {length} recall={(list: string[]) => {
 		recalledWords = list
 		go()
 	}}/>
 {:else if page == 6}
 	<Results {go} words={randomWords} recalled={recalledWords} />
 {:else if page == 7}
-	<Debrief />	
+	<Debrief  {length}/>	
 {:else}
 	<h1>Loading...</h1>
 {/if}

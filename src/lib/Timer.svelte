@@ -3,11 +3,9 @@
 
 	const { time } = $props<{
 		time: number
-	} & any>()
+	}>()
 
-	let timeLeft = tweened(time, {
-		duration: time * 1000,
-	})
+	let timeLeft = tweened(time, { duration: time * 1000 })
 
 	$effect(() => {
 		timeLeft.set(0)
@@ -16,8 +14,7 @@
 
 <div
 	class="size-20 rounded-full"
-	style="--angle: {(1 - $timeLeft / time) * 360}deg">
-</div>
+	style="--angle: {(1 - $timeLeft / time) * 360}deg" />
 
 <style lang="stylus">
 	div

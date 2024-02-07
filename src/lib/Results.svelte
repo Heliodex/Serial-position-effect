@@ -7,22 +7,25 @@
 
 	recalled = recalled.map(word => word || "")
 
-	// $effect(async () => {
-	// 	while (true) {
-	// 		try {
-	// 			await fetch("/send", {
-	// 				method: "POST",
-	// 				body: JSON.stringify({
-	// 					words,
-	// 					recalled,
-	// 				}),
-	// 			})
-	// 			return
-	// 		} catch (e) {
-	// 			await new Promise(resolve => setTimeout(resolve, 1000))
-	// 		}
-	// 	}
-	// })
+	$effect(async () => {
+		while (localStorage.getItem("sent") != "true")
+			try {
+				const result = await fetch("/send", {
+					method: "POST",
+					body: JSON.stringify({
+						words,
+						recalled
+					})
+				})
+
+				if (result.ok) {
+					localStorage.setItem("sent", "true")
+					return
+				}
+			} catch (e) {
+				await new Promise(resolve => setTimeout(resolve, 1000))
+			}
+	})
 </script>
 
 <div class="max-w-screen px-2 w-200">

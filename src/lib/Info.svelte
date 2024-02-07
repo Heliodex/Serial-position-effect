@@ -18,10 +18,14 @@
 			class="w-90" />
 
 		<p>
-			Afterwards, you will be shown a slideshow of {length} random words, one at a
-			time, for 3 seconds each. Every word is 10 letters long. A counter will
-			display which word you are on, and a timer will be displayed below the
-			word.
+			Afterwards, you will be shown a slideshow of random words, one at a
+			time, for 3 seconds each. Every word is 10 letters long. A counter
+			will display which word you are on, and a timer will be displayed
+			below the word.
+		</p>
+		<p>
+			Your slideshow will contain <b>{length}</b>
+			 words.
 		</p>
 
 		<img src="/step2.png" alt="Screenshot of the words task" class="w-90" />
