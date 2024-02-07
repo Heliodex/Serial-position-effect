@@ -14,9 +14,9 @@
 		</h1>
 		<p>Thank you for participating in this psychological study.</p>
 		<p>
-			This is a study on memory. You will complete a short memory test
-			that will take 1 to 3 minutes. More information will be provided on
-			the next page.
+			This is a study on memory for my Higher psychology assignment. You
+			will complete a short memory test that will take 1 to 3 minutes.
+			More information will be provided on the next page.
 		</p>
 		<p>
 			This study abides by the ethical guidelines set by the <a
@@ -33,7 +33,7 @@
 		onsubmit={() => {
 			submitted = true
 
-			if (passcode == "secret") go()
+			if (passcode == "psychology") go()
 		}}>
 		<div class="flex flex-col gap-3 pb-4">
 			<div class="grid grid-cols-[2rem_1fr] gap-2">
@@ -56,8 +56,7 @@
 			</div>
 
 			<label for="passcode" class="pt-8">
-				Please enter the passcode provided to you by the researcher to
-				proceed.
+				Please enter the passcode provided to you to proceed.
 			</label>
 			<input
 				required

@@ -3,6 +3,6 @@
 	import "/src/global.styl"
 </script>
 
-<main class="py-[min(12rem,15vh)] flex justify-center">
+<main class="p-6 py-[min(12rem,15vh)] flex justify-center">
 	<slot />
 </main>

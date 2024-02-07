@@ -13,9 +13,9 @@ export async function POST({ request }) {
 
 	await db.query(
 		`
-			INSERT INTO results (words, recalled)
-			VALUES ($1, $2)`,
-		[words, recalled]
+			INSERT INTO results (words, recalled, time)
+			VALUES ($1, $2, $3)`,
+		[words, recalled, Date.now()]
 	)
 
 	console.log("SENT!")

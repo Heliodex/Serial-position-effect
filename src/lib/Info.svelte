@@ -25,7 +25,7 @@
 		</p>
 		<p>
 			Your slideshow will contain <b>{length}</b>
-			 words.
+			words.
 		</p>
 
 		<img src="/step2.png" alt="Screenshot of the words task" class="w-90" />
@@ -52,6 +52,12 @@
 			src="/step4.png"
 			alt="Screenshot of the results page"
 			class="w-150" />
+
+		<p>
+			This is <b>not</b>
+			an intelligence test or a test of your abilities. You are not expected
+			to recall every word, though you are encouraged to try your best.
+		</p>
 
 		<p>
 			After this, the study will end and you will be shown the debrief

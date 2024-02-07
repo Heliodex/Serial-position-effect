@@ -9,7 +9,7 @@
 	import Wordlist from "$lib/words.json"
 	import Debrief from "$lib/Debrief.svelte"
 
-	const length = 20
+	const length = Math.random() > 0.5 ? 10 : 20
 	let randomWords: string[] = []
 	let recalledWords: string[] = $state(Array(length).fill(""))
 
@@ -23,8 +23,9 @@
 	let page = $state(0)
 
 	$effect(() => {
-		if (localStorage.getItem("done") == "true") page = 7
-		else page = 6
+		if (localStorage.getItem("done") === "true") page = 7
+		else if (localStorage.getItem("sent") === "true") page = 6
+		else page = 1
 	})
 
 	const go = () => page++
