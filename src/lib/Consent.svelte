@@ -15,8 +15,8 @@
 		<p>Thank you for participating in this psychological study.</p>
 		<p>
 			This is a study on memory for my Higher psychology assignment. You
-			will complete a short memory test that will take 1 to 3 minutes.
-			More information will be provided on the next page.
+			will complete a short memory test that will take between 1 and 3
+			minutes. More information will be provided on the next page.
 		</p>
 		<p>
 			This study abides by the ethical guidelines set by the <a
@@ -33,7 +33,7 @@
 		onsubmit={() => {
 			submitted = true
 
-			if (passcode == "psychology") go()
+			if (passcode.toLowerCase() == "psychology") go()
 		}}>
 		<div class="flex flex-col gap-3 pb-4">
 			<div class="grid grid-cols-[2rem_1fr] gap-2">
@@ -49,7 +49,8 @@
 				<input type="checkbox" required id="3" />
 				<label for="3">
 					I understand that my data will be published, and that my
-					identity will remain anonymous.
+					identity will remain anonymous and will not be associated
+					with my data.
 				</label>
 				<input type="checkbox" required id="4" />
 				<label for="4">I confirm that I am over the age of 16.</label>
@@ -67,6 +68,7 @@
 				px-4 text-lg rounded-2 w-50"
 				placeholder="passcode" />
 			{#if submitted}
+				<!-- won't show if immediately redirected -->
 				<span class="text-red-500">Incorrect passcode</span>
 			{/if}
 		</div>

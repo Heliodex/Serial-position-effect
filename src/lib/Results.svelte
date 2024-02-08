@@ -7,9 +7,12 @@
 
 	recalled = recalled.map(word => word || "")
 
+	let sent = $state(false)
+
 	$effect(async () => {
-		while (localStorage.getItem("sent") != "true")
+		while (localStorage.getItem("sent") != "true") {
 			try {
+				console.log("sending")
 				const result = await fetch("/send", {
 					method: "POST",
 					body: JSON.stringify({
@@ -19,19 +22,21 @@
 				})
 
 				if (result.ok) {
-					localStorage.setItem("sent", "true")
-					return
+					// localStorage.setItem("sent", "true")
+					break
 				}
-			} catch (e) {
-				await new Promise(resolve => setTimeout(resolve, 1000))
-			}
+			} catch (e) {}
+			await new Promise(resolve => setTimeout(resolve, 1000))
+		}
+
+		sent = true
 	})
 </script>
 
 <div class="max-w-screen px-2 w-200">
 	<h1 class="pb-4 text-2xl">Your results</h1>
 
-	<div class="<sm:w-80 w-120 grid sm:grid-cols-2 gap-4 mx-auto">
+	<div class="<sm:w-80 w-120 grid sm:grid-cols-2 gap-4 py-4 mx-auto">
 		{#each words as _, num}
 			{@const word = words[num].toLowerCase()}
 			{@const recall = recalled[num].toLowerCase()}
@@ -42,7 +47,7 @@
 			</span>
 			<span
 				class="text-xl text-white p-2 px-4 h-12 rounded-2
-				overflow-hidden {word == recall ? 'bg-green-500' : 'bg-red-400'} ">
+				overflow-hidden {word === recall ? 'bg-green-500' : 'bg-neutral-500'} ">
 				{recall}
 			</span>
 		{/each}
@@ -53,7 +58,14 @@
 		recalled the word correctly, it will be later marked as correct.
 	</p>
 
-	<p>Please click the button below to continue to the debrief page.</p>
+	{#if sent}
+		<p>
+			Your results have been recorded. Please click the button below to
+			continue to the debrief page.
+		</p>
 
-	<button onclick={go}>Continue</button>
+		<button onclick={go}>Continue</button>
+	{:else}
+		<p>Please stay on this page while your results are recorded...</p>
+	{/if}
 </div>

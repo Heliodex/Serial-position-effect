@@ -8,6 +8,7 @@
 	// type secret code to clear localstorage
 	let code = ""
 	const secret = "9739815628938" // hehehe
+
 	$effect(() =>
 		window.addEventListener("keydown", e => {
 			code += e.code.slice(5)

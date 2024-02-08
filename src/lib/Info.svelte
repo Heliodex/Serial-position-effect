@@ -12,6 +12,13 @@
 			The task you will complete is a word memorisation and recall task.
 			You will be shown a countdown timer before the test begins.
 		</p>
+
+		<p>
+			Don't use the browser's back button or refresh the page until the
+			test is finished, as this may cause you to lose progress or be
+			unable to complete the test.
+		</p>
+
 		<img
 			src="/step1.png"
 			alt="Screenshot of the countdown timer"
@@ -19,9 +26,9 @@
 
 		<p>
 			Afterwards, you will be shown a slideshow of random words, one at a
-			time, for 3 seconds each. Every word is 10 letters long. A counter
-			will display which word you are on, and a timer will be displayed
-			below the word.
+			time, for five seconds each. Every word is 10 letters long. A
+			counter will display which word you are on, and a timer will be
+			displayed below the word.
 		</p>
 		<p>
 			Your slideshow will contain <b>{length}</b>
@@ -54,14 +61,14 @@
 			class="w-150" />
 
 		<p>
-			This is <b>not</b>
-			an intelligence test or a test of your abilities. You are not expected
-			to recall every word, though you are encouraged to try your best.
+			After this, the study will end and you will be shown the debrief
+			page, which will explain the purpose of the study.
 		</p>
 
 		<p>
-			After this, the study will end and you will be shown the debrief
-			page, which will explain the purpose of the study.
+			This is <b>not</b>
+			an intelligence test or a test of your abilities. You are not expected
+			to recall every word, though you are encouraged to try your best.
 		</p>
 	</div>
 

@@ -9,10 +9,19 @@
 
 <div class="max-w-screen px-2 w-200">
 	<h1 class="text-2xl">Recall the words</h1>
-	<p>Please recall the words in the order they were shown.</p>
+	<p>
+		Please recall as many words as you can in the order they were shown, and
+		press continue when you have remembered as many as you can.
+	</p>
+	<p>Remember that each word must be 10 letters long.</p>
 
+	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<form
-		class="w-full flex flex-col w-50 gap-4 pb-4 items-center"
+		class="w-full flex flex-col w-50 gap-4 py-4 items-center"
+		onkeypress={e => {
+			// preventDefault if the user pressed enter accidentally
+			if (e.key === "Enter") e.preventDefault()
+		}}
 		onsubmit={() => recall(recalled)}>
 		{#each recalled as _, num}
 			<input
