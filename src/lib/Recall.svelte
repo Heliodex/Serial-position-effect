@@ -13,7 +13,13 @@
 		Please recall as many words as you can in the order they were shown, and
 		press continue when you have remembered as many as you can.
 	</p>
-	<p>Remember that each word must be 10 letters long.</p>
+
+	<!-- "bro i didnt know they had to be in order" -->
+	<!--  -->
+	<p
+		class="p-4 py-2 border-solid border-2 border-blue-7 bg-blue-3/25 rounded-3 text-blue-950">
+		Remember to recall the words <b>in the same order they were shown</b>, and that each word must be exactly 10 letters long.
+	</p>
 
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<form
