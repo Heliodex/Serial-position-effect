@@ -8,15 +8,17 @@
 <div class="max-w-screen px-2 w-200">
 	<div>
 		<h1 class="text-2xl">Information</h1>
-		<p>
-			The task you will complete is a word memorisation and recall task.
-			You will be shown a countdown timer before the test begins.
-		</p>
 
-		<p>
+		<p
+			class="p-4 py-2 border-solid border-2 border-red-7 bg-red-3/25 rounded-3 text-red-950">
 			Don't use the browser's back button or refresh the page until the
 			test is finished, as this may cause you to lose progress or be
 			unable to complete the test.
+		</p>
+
+		<p>
+			The task you will complete is a word memorisation and recall task.
+			You will be shown a countdown timer before the test begins.
 		</p>
 
 		<img

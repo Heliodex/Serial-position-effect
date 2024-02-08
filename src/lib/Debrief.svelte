@@ -33,12 +33,14 @@
 		If you have any questions or concerns, don't hesitate to ask.
 	</p>
 	<p>
-		The purpose of this study was to investigate the <b>
-			serial position effect.
-		</b>
-		This is the tendency for people to recall the first and last items in a list
-		better than the middle items. The data from the experiment will be used in
-		my Higher Psychology assignment.
+		The purpose of this study was to investigate the <a
+			href="https://wiki2.org/en/Serial-position_effect"
+			target="_blank">
+			serial-position effect.
+		</a>
+		This is the tendency for people to remember the items near the start or end
+		of a list better than the middle items. The data from the experiment will
+		be used in my Higher Psychology assignment.
 	</p>
 	<p>
 		{#if length === 10}

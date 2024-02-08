@@ -39,7 +39,7 @@
 			<div class="grid grid-cols-[2rem_1fr] gap-2">
 				<input type="checkbox" required id="1" />
 				<label for="1">
-					I have read and understood the information sheet.
+					I have read and understood this consent form.
 				</label>
 				<input type="checkbox" required id="2" />
 				<label for="2">
