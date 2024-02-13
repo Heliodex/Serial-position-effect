@@ -9,7 +9,7 @@
 	import Wordlist from "$lib/words.json"
 	import Debrief from "$lib/Debrief.svelte"
 
-	const length = Math.random() > 0.5 ? 10 : 20
+	const length = 20
 	let randomWords: string[] = []
 	let recalledWords: string[] = $state(Array(length).fill(""))
 
