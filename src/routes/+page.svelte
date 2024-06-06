@@ -8,17 +8,15 @@
 			serial-position effect.
 		</a>
 		This is the tendency for people to remember the items near the start or end
-		of a list better than the middle items. The data from the experiment will
-		be used in my Higher Psychology assignment.
+		of a list better than the middle items. The data from the experiment was
+		used in my Higher Psychology assignment.
 	</p>
 	<p>
-		If you were a participant in this study and wish to withdraw from the
-		study, you may email me at <a
-			href="mailto:heli@odex.cf"
-			target="_blank">
-			heli@odex.cf.
+		The assignment that this data was required for has now been submitted.
+		If you have any questions or concerns, don't hesitate to ask. You can
+		contact me at <a href="https://heliodex.cf" target="_blank">
+			https://heliodex.cf.
 		</a>
-		If you have any questions or concerns, don't hesitate to ask.
 	</p>
 	<p>
 		The source code for this website can be found at <a
